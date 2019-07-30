@@ -1,0 +1,25 @@
+O script desafio.py foi planejado para rodar em linux. 
+As instrucoes abaixo servem para Ubuntu.
+
+junto com o script esta o arquivo desafio-sample.csv, resultado de um run do programa para 50000 URLs com informacoes de 4400 produtos
+
+===================== INSTALL
+
+apt-get install python-dev libxml2-dev libxslt-dev lib32z1-dev
+pip install --upgrade requests cssselect lxml
+pip install urllib2
+pip install bs4
+
+
+
+===================== RUN
+
+python desafio.py >desafio.csv
+
+
+===================== TWEAK
+
+desafio.py foi implementado com uma arquitetura geral de crawler multiprocessado. Mas algumas linhas tem codigo adhoc especifico para o site do desafio, elas estao marcadas com um comentario # adhoc.
+Algumas linhas tambem estao marcadas com # tweak, que podem ser mudadas para o numero de processadores da maquina onde vai rodar, em com um limite maximo de URLs a percorrer
+
+
